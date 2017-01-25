@@ -1,0 +1,17 @@
+[servers:children]
+redhat
+debian
+
+[redhat:vars]
+ansible_user=root
+
+[debian:vars]
+ansible_user=user1
+become=true
+become_user=root
+
+[redhat]
+192.168.124.153
+
+[debian]
+192.168.124.107
